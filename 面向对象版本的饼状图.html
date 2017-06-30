@@ -18,16 +18,19 @@
 <body>
 <div id="container"></div>
 <script>
+    //创建一个舞台
     var stage = new Konva.Stage({
         container: 'container',
         width: window.innerWidth,
         height: window.innerHeight
     });
+    // 创建一个层
     var layer = new Konva.Layer();
+    //将层添加到舞台中
     stage.add(layer);
     var cenX = stage.width()/2;
     var cenY = stage.height()/2;
-
+    //初始化数据
     var data = [
         { name: "前端", value: .25, color: '#e0e'  },
         { name: "php",  value: .2,  color: 'orange'},
@@ -36,7 +39,7 @@
         { name: "游戏",	value: .1,	color: 'purple'},
         { name: "Java",	value: .1,	color: 'red'   }
     ];
-
+    
     var p = new PieChart({
         x: cenX,
         y: cenY,
